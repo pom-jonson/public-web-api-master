@@ -1,0 +1,53 @@
+name: Deploy to prod
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - run: yarn
+
+    - run: yarn run prettier-check
+
+    - run: yarn test
+
+
+    - name: Configure AWS Credentials for Prod
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
+        aws-region: ${{ secrets.PROD_AWS_REGION }}
+        aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
+
+    - name: Run pulumi refresh on prod
+      uses: pulumi/actions@v3
+      with:
+        command: refresh
+        stack-name: prod
+      env:
+        PULUMI_BACKEND_URL: s3://eos-pulumi-prod
+        PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
+
+    - name: Run pulumi up on prod
+      uses: pulumi/actions@v3
+      with:
+        command: up
+        stack-name: prod
+      env:
+        PULUMI_BACKEND_URL: s3://eos-pulumi-prod
+        PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}

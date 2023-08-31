@@ -1,0 +1,45 @@
+name: Deploy to test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - run: yarn
+
+    - run: yarn run prettier-check
+
+    - run: yarn test
+
+    - name: Configure AWS Credentials for Test
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.TEST_AWS_ACCESS_KEY_ID }}
+        aws-region: ${{ secrets.TEST_AWS_REGION }}
+        aws-secret-access-key: ${{ secrets.TEST_AWS_SECRET_ACCESS_KEY }}
+
+    - name: Run pulumi up on test
+      uses: pulumi/actions@v3
+      with:
+        command: up
+        stack-name: test
+      env:
+        PULUMI_BACKEND_URL: s3://eos-pulumi-test
+        PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
+
+    # - run: npm run e2e

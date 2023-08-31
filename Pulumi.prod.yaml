@@ -1,0 +1,36 @@
+encryptionsalt: v1:T+Cx1/7yHh8=:v1:QHoQJK1zKCVoRlLJ:VqV6NY49OyO1+2OqvOpnxUA5sieWhw==
+config:
+  aws:region: us-west-2
+  # eos-public-web-api:account_bucket_prefix: eosprod
+  eos-public-web-api:account_bucket: eos-projects-prod
+  eos-public-web-api:api_allowed_origins: https://editonthespot.com, https://app.editonthespot.com, https://dashboard.editonthespot.com
+  eos-public-web-api:api_custom_domain: api.editonthespot.com
+  eos-public-web-api:auth0_api_audience: public-web-api
+  eos-public-web-api:auth0_client_id: QJ8tcBADGh8STKF5IjiTFICVuzJy6UAs
+  eos-public-web-api:auth0_issuer: https://editonthespot.au.auth0.com/
+  eos-public-web-api:auth0_jwks_uri: https://editonthespot.au.auth0.com/.well-known/jwks.json
+  eos-public-web-api:aws_access_key_id:
+    secure: v1:nmqGbFwP1CqxtCMQ:sLRhY9MQ3LoSI+IMqruTCnsKN8esbk5apXN49ENNqWy1/aCd
+  eos-public-web-api:aws_region: us-west-2
+  eos-public-web-api:aws_secret_access_key:
+    secure: v1:kR4Ehcqn06wUcA68:2YKkYOwBcXZgBkoRPrYzQYpph18yN1muD/JGdNoTkjHoy51bBOipk6TfTdJ65Y2FjGU0cX1iuN0=
+  eos-public-web-api:deepgram_api_key:
+    secure: v1:29t7TaZhMdLWfPhD:F2mMdEGywjOYbAdDaiHKpX2s6MyPWZtLNJ2JXlGG2shRzwkcOcBh+wgtD43dyvevLwgt3FTj6QQ=
+  eos-public-web-api:default_account_page: /projects
+  eos-public-web-api:ecr_account_id: '827304474223'
+  eos-public-web-api:ecs_trimming_task_security_group: sg-06e2935263c698273
+  eos-public-web-api:ecs_trimming_task_subnet: subnet-0f91498d8328dc728
+  eos-public-web-api:email_from: '"Edit On The Spot" <support@editonthespot.com>'
+  eos-public-web-api:email_to: support@editonthespot.com?subject=Enquiry%20about%20Edit%20On%20The%20Spot&body=Hi%2C%0D%0A%0D%0A
+  eos-public-web-api:main_domain_zone_id: Z0443296396HNNLSA93CF
+  eos-public-web-api:media_convert_endpoint: https://hvtjrir1c.mediaconvert.us-west-2.amazonaws.com
+  eos-public-web-api:media_convert_role: arn:aws:iam::827304474223:role/MediaConvert_Default_Role
+  eos-public-web-api:public_purchase_website_url: https://editonthespot.ai
+  eos-public-web-api:public_website_url: https://editonthespot.com
+  eos-public-web-api:recording_configuration_arn: arn:aws:ivs:us-west-2:827304474223:recording-configuration/eI0K3Colk7xC
+  eos-public-web-api:sagemaker_instance_type: ml.g4dn.2xlarge
+  eos-public-web-api:ses_arn: arn:aws:ses:us-west-2:827304474223:identity/editonthespot.com
+  eos-public-web-api:ses_email_domain: editonthespot.com
+  eos-public-web-api:webhook_api_key: M%6EmZ$h$9cinQ53%
+  eos-public-web-api:tiny_url_api_key: 93hdWjMEh8MER5NcSuxIHNfnOmY4cgqdgFSFaLYzG4CiHO87aaCbb4ghhigl
+  eos-public-web-api:tiny_url_domain: share.editonthespot.com

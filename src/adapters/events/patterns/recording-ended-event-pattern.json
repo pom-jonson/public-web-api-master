@@ -1,0 +1,7 @@
+{
+  "source": ["aws.ivs"],
+  "detail-type": ["IVS Recording State Change"],
+  "detail": {
+    "recording_status": ["Recording End"]
+  }
+}

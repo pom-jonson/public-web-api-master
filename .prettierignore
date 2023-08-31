@@ -1,0 +1,7 @@
+.github
+node_modules
+build
+coverage
+babel.config.js
+package-lock.json
+**/*image.json

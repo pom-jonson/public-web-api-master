@@ -1,0 +1,18 @@
+{
+  "version": "0",
+  "id": "12345678-1a23-4567-a1bc-1a2b34567890",
+  "detail-type": "IVS Recording State Change",
+  "source": "aws.ivs",
+  "account": "123456789012",
+  "time": "2020-06-23T20:12:36Z",
+  "region": "us-west-2",
+  "resources": ["arn:aws:ivs:us-west-2:123456789012:channel/AbCdef1G2hij"],
+  "detail": {
+    "channel_name": "founders-editonthespot-com",
+    "stream_id": "st-1F6jDj0t3zV01cXKe5dScIJ",
+    "recording_status": "Recording End",
+    "recording_status_reason": "",
+    "recording_s3_bucket_name": "eos-projects-dev",
+    "recording_s3_key_prefix": "ivs/v1/881224265465/ytJ1fJw1x7pT/2022/2/10/14/11/gDXfh2CbR303"
+  }
+}

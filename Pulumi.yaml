@@ -1,0 +1,3 @@
+name: eos-public-web-api
+runtime: nodejs
+description: AWS TypeScript Pulumi program for Public Web API

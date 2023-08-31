@@ -1,0 +1,7 @@
+{
+  "source": ["aws.sagemaker"],
+  "detail-type": ["SageMaker Processing Job State Change"],
+  "detail": {
+    "ProcessingJobStatus": ["Completed"]
+  }
+}

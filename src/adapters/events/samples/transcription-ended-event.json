@@ -1,0 +1,14 @@
+{
+  "version": "0",
+  "id": "f1c6133a-4807-daf9-88a2-ab1bba2f9fd0",
+  "detail-type": "Transcribe Job State Change",
+  "source": "aws.transcribe",
+  "account": "881224265465",
+  "time": "2022-02-13T15:54:54Z",
+  "region": "us-west-2",
+  "resources": [],
+  "detail": {
+    "TranscriptionJobName": "transcribe-eos-founders-editonthespot-com-projects-pmu62s-recorded-on-zoom-2022-02-13-15-53-processed-original-master-footage-mp4",
+    "TranscriptionJobStatus": "COMPLETED"
+  }
+}

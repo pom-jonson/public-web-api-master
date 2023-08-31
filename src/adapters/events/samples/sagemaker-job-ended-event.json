@@ -1,0 +1,21 @@
+{
+  "version": "0",
+  "id": "0a15f67d-aa23-0123-0123-01a23w89r01t",
+  "detail-type": "SageMaker Processing Job State Change",
+  "source": "aws.sagemaker",
+  "account": "123456789012",
+  "time": "2019-05-31T21:49:54Z",
+  "region": "us-east-2",
+  "detail": {
+    "ProcessingOutputConfig": {
+      "Outputs": [
+        {
+          "S3Output": {
+            "S3Uri": "s3://eos-projects-dev/founders-editonthespot-com/projects/265t1t-recorded-on-zoom-2022-05-02-18-48/processed/top-and-tail"
+          }
+        }
+      ]
+    },
+    "ProcessingJobStatus": "Completed"
+  }
+}

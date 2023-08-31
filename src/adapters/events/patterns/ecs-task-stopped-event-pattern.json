@@ -1,0 +1,17 @@
+{
+  "source": ["aws.ecs"],
+  "detail-type": ["ECS Task State Change"],
+  "detail": {
+    "lastStatus": ["STOPPED"],
+    "clusterArn": [
+      "arn:aws:ecs:us-west-2:881224265465:cluster/fargate-clu",
+      "arn:aws:ecs:us-west-2:827304474223:cluster/fargate-clu",
+      "arn:aws:ecs:us-west-2:451560708603:cluster/fargate-clu"
+    ],
+    "taskDefinitionArn": [
+      { "prefix": "arn:aws:ecs:us-west-2:881224265465:task-definition/top-and-tail-ai:" },
+      { "prefix": "arn:aws:ecs:us-west-2:827304474223:task-definition/top-and-tail-ai:" },
+      { "prefix": "arn:aws:ecs:us-west-2:451560708603:task-definition/top-and-tail-ai:" }
+    ]
+  }
+}

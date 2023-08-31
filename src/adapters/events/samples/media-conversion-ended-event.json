@@ -1,0 +1,34 @@
+{
+  "version": "0",
+  "id": "ff855457-96e9-59f7-dfc9-f3688a3f5276",
+  "detail-type": "MediaConvert Job State Change",
+  "source": "aws.mediaconvert",
+  "account": "123456789012",
+  "time": "2017-11-29T18:57:23Z",
+  "region": "us-east-1",
+  "resources": ["arn:aws:mediaconvert:us-east-1:123456789012:jobs/123456789012-smb6o7"],
+  "detail": {
+    "timestamp": 1511981843037,
+    "accountId": "123456789012",
+    "queue": "arn:aws:mediaconvert:us-east-1:123456789012:queues/Default",
+    "jobId": "123456789012-smb6o7",
+    "status": "COMPLETE",
+    "userMetadata": {},
+    "outputGroupDetails": [
+      {
+        "outputDetails": [
+          {
+            "outputFilePaths": [
+              "s3://eos-founders-editonthespot-com/projects/recorded-on-zoom-2022-02-02-10-44/processed/original/master-footage.mp4"
+            ],
+            "durationInMs": 10010,
+            "videoDetails": {
+              "widthInPx": 1280,
+              "heightInPx": 720
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
